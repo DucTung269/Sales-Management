@@ -8,6 +8,7 @@
 - **Verwendete Tools**
   - *Excel*
   - *SQL*
-  - *Power BI*
   - *SQL Server Management Studio (SSMS)*
+  - *Power BI*
+  - *DAX function*
    
