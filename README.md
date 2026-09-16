@@ -5,7 +5,7 @@
 ### Projektdetails  
 
 - **Datenquelle**:
-- **Verwendete Tools
+- **Verwendete Tools**
   - *Excel*
   - *SQL*
   - *Power BI*
