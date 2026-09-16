@@ -9,4 +9,5 @@
   - *Excel*
   - *SQL*
   - *Power BI*
+  - *SQL Server Management Studio (SSMS)*
    
