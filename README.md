@@ -17,4 +17,10 @@
   - Transform Data by using Power Query and Using DAX Functions for Measurements 
   - Creating Dashboards using Power BI for visualising and reporting
     
-![Sales Overview](https://github.com/DucTung269/Sales-Management/blob/main/Images/Customer%20Details.png?raw=true)
+![Sales Overview](https://github.com/DucTung269/Sales-Management/blob/main/Images/Sales%20Overview.png?raw=true)
+
+![Sales KPI](https://github.com/DucTung269/Sales-Management/blob/main/Images/Sales%20KPI%202020.png?raw=true)
+
+![Product Details](https://github.com/DucTung269/Sales-Management/blob/main/Images/Product%20Details.png?raw=true)
+
+![Customer Details](https://github.com/DucTung269/Sales-Management/blob/main/Images/Customer%20Details.png?raw=true)
