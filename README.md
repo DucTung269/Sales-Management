@@ -33,7 +33,12 @@
 
 ![Sales KPI](https://github.com/DucTung269/Sales-Management/blob/main/Images/Sales%20KPI%202020.png?raw=true)
 
+- In 2020 the company had 16,35 Mio Euro in sales over 52801 orders, which is exceed the sales target 15 Mio. Although the actual sales in Dezember, Juli and September is less than target sales, but in total still more than 1,35 Mio Euro. 
+
 ![Product Details](https://github.com/DucTung269/Sales-Management/blob/main/Images/Product%20Details.png?raw=true)
+
+- The company has totally 606 different products and most of them are bike. The table shows the sales for each product monthly and the total sales each month and for each product.
 
 ![Customer Details](https://github.com/DucTung269/Sales-Management/blob/main/Images/Customer_Details.png?raw=true)
 
+- The company hat 18484 customers. The table on the right side show the customer transactions, it showes the information of customer like Name, Birth of Date, Adress, what they bought and how much they the spent. The table under show how much the customers spent totally from 2019 to 2021.
