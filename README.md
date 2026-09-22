@@ -34,6 +34,5 @@
 
 ![Product Details](https://github.com/DucTung269/Sales-Management/blob/main/Images/Product%20Details.png?raw=true)
 
-![Customer Details](https://github.com/DucTung269/Sales-Management/blob/main/Images/Customer%20Details.png?raw=true)
-
+![Customer Details](https://github.com/DucTung269/Sales-Management/blob/main/Images/Customer_Details.png?raw=true)
 
