@@ -27,6 +27,7 @@
   
 ![Sales Overview](https://github.com/DucTung269/Sales-Management/blob/main/Images/Sales%20Overview.png?raw=true)
 
+- From 2019 to 2021 the company has 29,36 Mio Euro in sales, got 18484 customers over 60398 oders. The most part of sales is bike with 96,46% of sales, follow by Accessories with 4% of sales. The sales of company increased over time and got it peaks around 2.5 mio Euro in Dezember. Most part of the market sales locate in North America and Europe. Mountain-200 black 46 bike is the popular product. Jordan Turner is the customer who spend the most round 16.000 Euro. 
 
 
 
