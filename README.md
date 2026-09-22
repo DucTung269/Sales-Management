@@ -1,94 +1,85 @@
-# Sales Management Analytics Dashboard
+# Sales Management
 
 ## Project Overview
 
-This project presents an end-to-end sales analytics solution built with the Microsoft AdventureWorks sample database.
+This project presents an end-to-end sales analytics solution based on the **Microsoft AdventureWorks sample database**.
 
-The objective was to transform raw transactional data into a structured analytical model and interactive Power BI dashboard that supports analysis of:
+The objective is to transform raw transactional data into a structured analytical model and interactive Power BI dashboards for monitoring:
 
-- Overall sales performance
+- Sales performance
 - Product performance
 - Customer activity
 - Geographic sales distribution
 - Monthly sales patterns
-- Sales performance against budget / target
+- Actual Sales vs. Sales Target
+- Top-performing products and customers
 
-The project demonstrates the complete analytics workflow:
+The project follows the complete analytics workflow:
 
 **SQL → Data Cleaning → Power Query → Data Modeling → DAX → Power BI → Business Analysis**
 
 ---
 
-## Business Objectives
+## Project Details
 
-The dashboard was designed to answer the following business questions:
-
-- How much revenue was generated during the reporting period?
-- Which products and product categories generate the most sales?
-- Which customers contribute the most revenue?
-- Where are customers and sales geographically concentrated?
-- How does sales performance vary by month?
-- Did actual sales meet or exceed the planned sales target?
-- Which months performed above or below budget?
-- How can sales performance be explored by product, customer, year, month, and location?
-
----
-
-## Data Source
+### Data Source
 
 **Microsoft AdventureWorks Sample Database**
 
-[Download AdventureWorks](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver17&tabs=ssms)
+Click here to access and download the sample database:
 
-### Reporting Scope
+[AdventureWorks](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver17&tabs=ssms)
 
-The Power BI model supports the years:
+### Reporting Period
+
+The Date dimension supports:
 
 - 2019
 - 2020
 - 2021
 
-After validating the sales fact table, the actual transaction period used in the current model is:
+After validating and cleaning the Sales Fact table, the sales transactions included in the current analysis cover:
 
 - **First Sales Date:** 02 January 2019
 - **Last Sales Date:** 28 January 2021
 
-> **Important:** 2021 contains only partial-year sales data and should therefore not be directly compared with the full years 2019 and 2020.
+> **Note:** 2021 contains only partial-year data. Therefore, 2021 should not be interpreted as a complete year when comparing annual performance.
 
 ---
 
 ## Tools Used
 
-- SQL Server Management Studio (SSMS)
 - Microsoft Excel
+- SQL Server Management Studio (SSMS)
 - Power Query
 - Power BI
 - DAX
 
 ---
 
-## Data Preparation
+## Tasks Performed
 
-SQL was used to extract, clean, transform, and enrich the source data before loading it into Power BI.
-
-The main preparation steps included:
-
-- Selecting only business-relevant columns
-- Filtering the reporting period
-- Joining customer data with geographic information
-- Combining product data with category and subcategory information
-- Transforming coded values into readable labels
-- Handling missing values
-- Standardizing date columns
-- Creating business-friendly column names
-- Preparing fact and dimension tables for Power BI
-- Performing additional transformations in Power Query
+- Extracted relevant data using SQL
+- Cleaned and transformed raw data
+- Prepared customer, product, date, and sales datasets
+- Joined related tables using SQL
+- Enriched customer data with geographic information
+- Combined product information with category and subcategory data
+- Standardized dates and numeric fields
+- Performed additional transformations in Power Query
+- Built a star-schema-style semantic model
+- Created DAX measures for business KPIs
+- Validated fact-to-dimension relationships
+- Reconciled KPI totals against detailed matrix totals
+- Created interactive Power BI dashboards for analysis and reporting
 
 ---
 
-## SQL Techniques Used
+## SQL Techniques and Functions Used
 
-The project uses the following SQL techniques and functions:
+The project uses SQL for data extraction, validation, cleaning, and transformation.
+
+Techniques and functions used include:
 
 - `SELECT`
 - `DISTINCT`
@@ -100,13 +91,13 @@ The project uses the following SQL techniques and functions:
 - `ISNULL()`
 - `ORDER BY`
 - Table aliases
-- Column aliases using `AS`
+- Column aliases with `AS`
 - Date filtering
 - Data validation queries
 
-### Example Transformations
+Customer data was enriched with geographic information, product data was combined with product category and subcategory hierarchies, date dimensions were prepared for time-based analysis, and Internet sales transactions were filtered and transformed before being loaded into Power BI.
 
-Customer gender codes were converted into readable values:
+Example transformation:
 
 ```sql
 CASE
