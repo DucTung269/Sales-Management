@@ -1,44 +1,116 @@
-# Sales-Management
+# Sales Management Analytics Dashboard
 
+## Project Overview
+
+This project presents an end-to-end sales analytics solution built with the Microsoft AdventureWorks sample database.
+
+The objective was to transform raw transactional data into a structured analytical model and interactive Power BI dashboard that supports analysis of:
+
+- Overall sales performance
+- Product performance
+- Customer activity
+- Geographic sales distribution
+- Monthly sales patterns
+- Sales performance against budget / target
+
+The project demonstrates the complete analytics workflow:
+
+**SQL → Data Cleaning → Power Query → Data Modeling → DAX → Power BI → Business Analysis**
 
 ---
-### Projektdetails  
 
-- **Data Source:** Google AdventureWorks Sample Data Base : Click hier to see the link and download [AdventureWorks](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver17&tabs=ssms)
-- **Tools Used:**
-  - Microsoft Excel
-  - Power Query
-  - SQL Management Studio (SSMS)
-  - Power BI
-  - DAX Functions
-- **Tasks Performed:**
-  - Using SQL to cleaning data
-  - Transforming data into Excel Files
-  - Transform Data by using Power Query and Using DAX Functions for Measurements 
-  - Creating Dashboards using Power BI for visualising and reporting
+## Business Objectives
 
-- **SQL Techniques and Functions Used** : Data extraction and transformation using SELECT, DISTINCT, WHERE, LEFT JOIN, CASE WHEN, CAST, LEFT, ISNULL, column/table aliases, and ORDER BY. Customer data was enriched with geographic information, product data was combined with category and subcategory hierarchies, date dimensions were prepared for time-based reporting, and Internet sales transactions were filtered and transformed for Power BI analysis.
+The dashboard was designed to answer the following business questions:
 
-- **Model Review**: Tables were cleaned and extracted after using SQL Queries. Dimension Tables such as Dim_Customers, Dim_Date and Dim_Products connect to Fact Table Fact_Sales.
+- How much revenue was generated during the reporting period?
+- Which products and product categories generate the most sales?
+- Which customers contribute the most revenue?
+- Where are customers and sales geographically concentrated?
+- How does sales performance vary by month?
+- Did actual sales meet or exceed the planned sales target?
+- Which months performed above or below budget?
+- How can sales performance be explored by product, customer, year, month, and location?
 
-![Model Review](https://github.com/DucTung269/Sales-Management/blob/main/Images/Model%20View.png?raw=true)
+---
 
-- **Dashboard Overview and Analysis**
-  
-![Sales Overview](https://github.com/DucTung269/Sales-Management/blob/main/Images/Sales__Overview.png?raw=true)
+## Data Source
 
-- From 2019 to 2021 the company has 29,36 Mio Euro in sales, got 18484 customers over 60398 oders. The most part of sales is bike with 96,46% of sales, follow by Accessories with 4% of sales. The sales of company increased over time and got it peaks around 2.5 mio Euro in Dezember. Most part of the market sales locate in North America and Europe. Mountain-200 black 46 bike is the popular product. Jordan Turner is the customer who spend the most round 16.000 Euro. 
+**Microsoft AdventureWorks Sample Database**
 
+[Download AdventureWorks](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver17&tabs=ssms)
 
+### Reporting Scope
 
-![Sales KPI](https://github.com/DucTung269/Sales-Management/blob/main/Images/Sales__KPI.png?raw=true)
+The Power BI model supports the years:
 
-- In 2020 the company had 16,35 Mio Euro in sales over 52801 orders, which is exceed the sales target 15 Mio. Although the actual sales in Dezember, Juli and September is less than target sales, but in total still more than 1,35 Mio Euro. 
+- 2019
+- 2020
+- 2021
 
-![Product Details](https://github.com/DucTung269/Sales-Management/blob/main/Images/Product__Details.png?raw=true)
+After validating the sales fact table, the actual transaction period used in the current model is:
 
-- The company has totally 606 different products and most of them are bike. The table shows the sales for each product monthly and the total sales each month and for each product.
+- **First Sales Date:** 02 January 2019
+- **Last Sales Date:** 28 January 2021
 
-![Customer Details](https://github.com/DucTung269/Sales-Management/blob/main/Images/Customer__Details.png?raw=true)
+> **Important:** 2021 contains only partial-year sales data and should therefore not be directly compared with the full years 2019 and 2020.
 
-- The company hat 18484 customers. The table on the right side show the customer transactions, it showes the information of customer like Name, Birth of Date, Adress, what they bought and how much they the spent. The table under show how much the customers spent totally from 2019 to 2021.
+---
+
+## Tools Used
+
+- SQL Server Management Studio (SSMS)
+- Microsoft Excel
+- Power Query
+- Power BI
+- DAX
+
+---
+
+## Data Preparation
+
+SQL was used to extract, clean, transform, and enrich the source data before loading it into Power BI.
+
+The main preparation steps included:
+
+- Selecting only business-relevant columns
+- Filtering the reporting period
+- Joining customer data with geographic information
+- Combining product data with category and subcategory information
+- Transforming coded values into readable labels
+- Handling missing values
+- Standardizing date columns
+- Creating business-friendly column names
+- Preparing fact and dimension tables for Power BI
+- Performing additional transformations in Power Query
+
+---
+
+## SQL Techniques Used
+
+The project uses the following SQL techniques and functions:
+
+- `SELECT`
+- `DISTINCT`
+- `WHERE`
+- `LEFT JOIN`
+- `CASE WHEN`
+- `CAST()`
+- `LEFT()`
+- `ISNULL()`
+- `ORDER BY`
+- Table aliases
+- Column aliases using `AS`
+- Date filtering
+- Data validation queries
+
+### Example Transformations
+
+Customer gender codes were converted into readable values:
+
+```sql
+CASE
+    WHEN c.[Gender] = 'M' THEN 'Male'
+    WHEN c.[Gender] = 'F' THEN 'Female'
+    ELSE 'Unknown'
+END AS [Gender]
