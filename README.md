@@ -7,7 +7,7 @@
 - **Data Source:** Google AdventureWorks Sample Data Base : Click hier to see the link and download [AdventureWorks](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver17&tabs=ssms)
 - **Tools Used:**
   - Microsoft Excel
-  - Excel Power Query
+  - Power Query
   - SQL Management Studio (SSMS)
   - Power BI
   - DAX Functions
