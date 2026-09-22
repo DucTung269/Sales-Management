@@ -19,7 +19,7 @@
 
 - **SQL Techniques and Functions Used** : Data extraction and transformation using SELECT, DISTINCT, WHERE, LEFT JOIN, CASE WHEN, CAST, LEFT, ISNULL, column/table aliases, and ORDER BY. Customer data was enriched with geographic information, product data was combined with category and subcategory hierarchies, date dimensions were prepared for time-based reporting, and Internet sales transactions were filtered and transformed for Power BI analysis.
 
-- **Model Review**: Tables were cleaned and extracted after using SQL Queries. Dimension Tables such as DimCustomers, DimDate and DimProducts connect to Fact Table Sales.
+- **Model Review**: Tables were cleaned and extracted after using SQL Queries. Dimension Tables such as Dim_Customers, Dim_Date and Dim_Products connect to Fact Table Fact_Sales.
 
 ![Model Review](https://github.com/DucTung269/Sales-Management/blob/main/Images/Model%20View.png?raw=true)
 
